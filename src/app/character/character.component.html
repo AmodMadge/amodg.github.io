@@ -1,0 +1,25 @@
+<div class ="container">
+  <h1 style="text-align:center;"> Game Of Thrones Character list is here..</h1>
+
+<div class="row" style="text-align: center" *ngIf="allCharacters.length>0">
+    <!-- iterative div starts here -->
+    <div *ngFor="let character of allCharacters" class="col-md-4">
+      <div class="card text-white bg-success mb-3" style="max-width: 29rem;">
+        <img class="card-img-top img-fluid" src="../assets/Images/6152ichXSZL.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{character.gender | uppercase}}</h6>
+      
+            <p class="card-text"> This character is contained in following books. {{character.books}}
+            <br>
+         
+        </div>
+        <div class="card-footer text-muted">
+          
+          <a [routerLink]="['/character', character.gender]" class="btn btn-primary">Character Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end iterative div -->
+</div>

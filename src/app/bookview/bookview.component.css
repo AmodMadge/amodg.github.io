@@ -1,0 +1,20 @@
+h2 {
+    font-size: 6 rem;
+    text-align: center;
+    font-family: "Warnock";
+    text-decoration: underline;
+    color: #8e44ad;
+    font-weight: 700;
+    font-style:italic;
+   
+
+}
+
+p {
+    font-size: 2rem;
+    font-style: italic; 
+}
+.container{
+    display:block;
+    border: 10px solid Red; 
+}

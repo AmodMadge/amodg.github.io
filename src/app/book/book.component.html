@@ -1,0 +1,25 @@
+<div class ="container">
+    <h1 style="text-align:center;"> Game Of Thrones Book list is here..</h1>
+   <div class="row" style="text-align: center" *ngIf="allBooks.length>0">
+    <!-- iterative div starts here -->
+    <div *ngFor="let book of allBooks" class="col-md-4">
+      <div class="card text-white bg-dark mb-3" style="max-width: 29rem;">
+        <img class="card-img-top"  src="../assets/Images/902243-product-feature2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{book.name | uppercase}}</h6>
+          <p class="card-text"> This contains book title {{book.name}}
+            <br/> with ISBN {{book.isbn}} .
+            <br> The number of pages included in this book are {{book.numberOfPages}}.
+            <br> And this book is published by {{book.publisher}} publisher.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+         
+          <a [routerLink]="['/book', book.name]" class="btn btn-warning">Book Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end iterative div -->
+</div>

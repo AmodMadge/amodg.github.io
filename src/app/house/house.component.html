@@ -1,0 +1,24 @@
+<div class ="container">
+  <h1 style="text-align:center;"> Game Of Thrones House list is here..</h1>
+<div class="row" style="text-align: center" *ngIf="allHouses.length>0">
+    <!-- iterative div starts here -->
+    <div *ngFor="let house of allHouses" class="col-md-4">
+      <div class="card text-white bg-primary mb-3" style="max-width: 29rem;">
+        <img class="card-img-top img-fluid" src="../assets/Images/game-of-thrones-house-banner.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{house.name | uppercase}}</h6>
+           <p class="card-text"> This contains book title {{house.name}}
+            <br/> with region {{house.region}} .
+            <br> The number coatOfArms in this book are {{house.coatOfArms}}.
+            <br>
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+            <a [routerLink]="['/house', house.name]" class="btn btn-danger">House Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end iterative div -->
+</div>
